@@ -95,3 +95,9 @@ C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_
 C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\obj\Debug\net6.0\Selenium_tests_Lazukov.pdb
 C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\obj\Debug\net6.0\Selenium_tests_Lazukov.genruntimeconfig.cache
 C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\obj\Debug\net6.0\ref\Selenium_tests_Lazukov.dll
+C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\obj\Debug\net6.0\Selenium_tests_Lazukov.sourcelink.json
+C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
+C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\bin\Debug\net6.0\FluentAssertions.dll
+C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Анастасия\RiderProjects\Selenium_tests_Lazukov\Selenium_tests_Lazukov\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

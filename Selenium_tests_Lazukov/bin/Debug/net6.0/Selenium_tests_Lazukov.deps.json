@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "Selenium_tests_Lazukov/1.0.0": {
         "dependencies": {
-          "Microsoft.NET.Test.Sdk": "17.9.0",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "FluentAssertions": "7.0.0-alpha.3",
+          "Microsoft.NET.Test.Sdk": "17.10.0-release-24177-07",
           "NUnit": "4.1.0",
           "Selenium.WebDriver": "4.19.0"
         },
@@ -16,36 +18,58 @@
           "Selenium_tests_Lazukov.dll": {}
         }
       },
-      "Microsoft.CodeCoverage/17.9.0": {
+      "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.19.0"
+        },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
-            "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.724.7204"
+          "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
+            "assemblyVersion": "3.11.0.0",
+            "fileVersion": "3.11.0.0"
           }
         }
       },
-      "Microsoft.NET.Test.Sdk/17.9.0": {
+      "FluentAssertions/7.0.0-alpha.3": {
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.9.0",
-          "Microsoft.TestPlatform.TestHost": "17.9.0"
+          "System.Configuration.ConfigurationManager": "4.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/17.9.0": {
+      "Microsoft.CodeCoverage/17.10.0-release-24177-07": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "17.1000.424.16205"
+          }
+        }
+      },
+      "Microsoft.NET.Test.Sdk/17.10.0-release-24177-07": {
+        "dependencies": {
+          "Microsoft.CodeCoverage": "17.10.0-release-24177-07",
+          "Microsoft.TestPlatform.TestHost": "17.10.0-release-24177-07"
+        }
+      },
+      "Microsoft.TestPlatform.ObjectModel/17.10.0-release-24177-07": {
         "dependencies": {
           "System.Reflection.Metadata": "1.6.0"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.TestPlatform.CoreUtilities.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           },
           "lib/netcoreapp3.1/Microsoft.TestPlatform.PlatformAbstractions.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           },
           "lib/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           }
         },
         "resources": {
@@ -129,31 +153,31 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/17.9.0": {
+      "Microsoft.TestPlatform.TestHost/17.10.0-release-24177-07": {
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "17.9.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.10.0-release-24177-07",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.TestPlatform.CommunicationUtilities.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           },
           "lib/netcoreapp3.1/Microsoft.TestPlatform.CrossPlatEngine.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           },
           "lib/netcoreapp3.1/Microsoft.TestPlatform.Utilities.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           },
           "lib/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.Common.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           },
           "lib/netcoreapp3.1/testhost.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.900.24.10602"
+            "fileVersion": "17.1000.24.17707"
           }
         },
         "resources": {
@@ -307,7 +331,34 @@
           }
         }
       },
-      "System.Reflection.Metadata/1.6.0": {}
+      "System.Configuration.ConfigurationManager/4.4.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      },
+      "System.Reflection.Metadata/1.6.0": {},
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -316,33 +367,47 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.CodeCoverage/17.9.0": {
+    "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RGD37ZSrratfScYXm7M0HjvxMxZyWZL4jm+XgMZbkIY1UPgjUpbNA/t+WTGj/rC/0Hm9A3IrH3ywbKZkOCnoZA==",
-      "path": "microsoft.codecoverage/17.9.0",
-      "hashPath": "microsoft.codecoverage.17.9.0.nupkg.sha512"
+      "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
+      "path": "dotnetseleniumextras.waithelpers/3.11.0",
+      "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
     },
-    "Microsoft.NET.Test.Sdk/17.9.0": {
+    "FluentAssertions/7.0.0-alpha.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7GUNAUbJYn644jzwLm5BD3a2p9C1dmP8Hr6fDPDxgItQk9hBs1Svdxzz07KQ/UphMSmgza9AbijBJGmw5D658A==",
-      "path": "microsoft.net.test.sdk/17.9.0",
-      "hashPath": "microsoft.net.test.sdk.17.9.0.nupkg.sha512"
+      "sha512": "sha512-c5HCYKAW0vhxx8qJ6s8o683GqjfKD7HCJPGA9IOcnZVvqa8atkG0mYhHEpkp/hnC4IVhRPmX+wHjBXDyZVn+3g==",
+      "path": "fluentassertions/7.0.0-alpha.3",
+      "hashPath": "fluentassertions.7.0.0-alpha.3.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.ObjectModel/17.9.0": {
+    "Microsoft.CodeCoverage/17.10.0-release-24177-07": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1ilw/8vgmjLyKU+2SKXKXaOqpYFJCQfGqGz+x0cosl981VzjrY74Sv6qAJv+neZMZ9ZMxF3ArN6kotaQ4uvEBw==",
-      "path": "microsoft.testplatform.objectmodel/17.9.0",
-      "hashPath": "microsoft.testplatform.objectmodel.17.9.0.nupkg.sha512"
+      "sha512": "sha512-mq5zBpsT40IHOm25aLP9dwWBjT3rH/PyiwiyQ+krHGfp57r9C3MtjTY6WPMtM8DK9osRCBqEGXAjjEkVXpOZAg==",
+      "path": "microsoft.codecoverage/17.10.0-release-24177-07",
+      "hashPath": "microsoft.codecoverage.17.10.0-release-24177-07.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.TestHost/17.9.0": {
+    "Microsoft.NET.Test.Sdk/17.10.0-release-24177-07": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Spmg7Wx49Ya3SxBjyeAR+nQpjMTKZwTwpZ7KyeOTIqI/WHNPnBU4HUvl5kuHPQAwGWqMy4FGZja1HvEwvoaDiA==",
-      "path": "microsoft.testplatform.testhost/17.9.0",
-      "hashPath": "microsoft.testplatform.testhost.17.9.0.nupkg.sha512"
+      "sha512": "sha512-OIvw7UlANS20ybCP7orcX4WSfyUc7SUzkAl/Fo51O9IqmSJA0Pa8LW96bQ3c8KFDiV7K5ckSS0QFmyw10C66IA==",
+      "path": "microsoft.net.test.sdk/17.10.0-release-24177-07",
+      "hashPath": "microsoft.net.test.sdk.17.10.0-release-24177-07.nupkg.sha512"
+    },
+    "Microsoft.TestPlatform.ObjectModel/17.10.0-release-24177-07": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Km1jsYkTtwZmN3EQ4kom76eZiN/WXWiMkk007NpL39lP6OtFD2NARw4bqs+NMokIFQZrMwqtt+IVtvDgbkiQbA==",
+      "path": "microsoft.testplatform.objectmodel/17.10.0-release-24177-07",
+      "hashPath": "microsoft.testplatform.objectmodel.17.10.0-release-24177-07.nupkg.sha512"
+    },
+    "Microsoft.TestPlatform.TestHost/17.10.0-release-24177-07": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yPFZE4cUyJLMsDCHY8EC8N945Cxy+sXB8Epa5aC3glcAMlm9vziUtKDvbY1lNmMB8Ri2E4OHfEQuor1/pLWqtg==",
+      "path": "microsoft.testplatform.testhost/17.10.0-release-24177-07",
+      "hashPath": "microsoft.testplatform.testhost.17.10.0-release-24177-07.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
@@ -365,12 +430,26 @@
       "path": "selenium.webdriver/4.19.0",
       "hashPath": "selenium.webdriver.4.19.0.nupkg.sha512"
     },
+    "System.Configuration.ConfigurationManager/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+      "path": "system.configuration.configurationmanager/4.4.0",
+      "hashPath": "system.configuration.configurationmanager.4.4.0.nupkg.sha512"
+    },
     "System.Reflection.Metadata/1.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
     }
   }
 }
